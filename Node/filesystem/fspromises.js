@@ -20,7 +20,7 @@ const path = require('path');
 const fileName ='fspromise.txt';
 const filePath = path.join(__dirname,fileName);
 
-fs.promises.writeFile(filePath,'This is initial data').then((data)=> console.log('Created..')).catch((err)=>console.log(err));
+// fs.promises.writeFile(filePath,'This is initial data').then((data)=> console.log('Created..')).catch((err)=>console.log(err));
 
 //Read file
 
@@ -33,3 +33,11 @@ fs.promises.writeFile(filePath,'This is initial data').then((data)=> console.log
 
 // //Delete File 
 // fs.promises.unlink(fileName).then(()=>console.log('Delete Successfully')).catch((err)=>console.log(err));
+
+// Rename Files
+// To rename a file with the File System module,  use the fs.rename() method.
+
+// The fs.rename() method renames the specified file:
+ const fileName2 ='rename.txt';
+const filepath2 = path.join(__dirname,fileName2)
+fs.promises.rename(filepath2,filePath,'utf-8').then(()=>console.log('rename successfull')).catch((err)=>console.log(err));
