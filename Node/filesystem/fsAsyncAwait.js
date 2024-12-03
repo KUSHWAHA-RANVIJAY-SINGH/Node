@@ -1,5 +1,7 @@
 const fs =require('fs/promises')
 const path = require('path')
+const os =require('os');
+console.log(os.cpus().length)
 const filename ='fsAsync.txt';
 
 const filePath =path.join(__dirname,filename);
@@ -50,13 +52,13 @@ const filePath =path.join(__dirname,filename);
 // }
 // updateFile();
 
-//Delete File 
-const deleteFile = async () => {
-    try {
-      await  fs.unlink(filePath);
-        console.log("file deleted");
-    } catch (error) {
-        console.log(error);
-    }
-}
-deleteFile();
+// //Delete File 
+// const deleteFile = async () => {
+//     try {
+//       await  fs.unlink(filePath);
+//         console.log("file deleted");
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+// deleteFile();
