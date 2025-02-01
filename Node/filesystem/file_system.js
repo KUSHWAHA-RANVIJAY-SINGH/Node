@@ -31,7 +31,7 @@ const filePath = path.join(__dirname, 'newfile.txt');
 
 // //Rename file
 
-// const newUpdateFileName ='updatetest.txt';
-// const newFilePath = path.join(__dirname,newUpdateFileName);
-// const renamefile = fs.renameSync(filePath, newFilePath);
-// console.log(renamefile)
+const newUpdateFileName ='updatetest.txt';
+const newFilePath = path.join(__dirname,newUpdateFileName);
+const renamefile = fs.renameSync(filePath, newFilePath);
+console.log(renamefile)
