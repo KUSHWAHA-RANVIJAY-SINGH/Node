@@ -6,3 +6,4 @@ app.get('/',async(req,resp)=>{
     let result =await data.find().toArray();
     resp.send(result);
 }).listen(3000);
+
