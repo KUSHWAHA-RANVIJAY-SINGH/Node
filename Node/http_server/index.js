@@ -33,9 +33,13 @@ app.get('/',(req,res)=>{
    return res.send('Hello from Home Page');  
 });
 
-app.get('/about',(req,res)=>{
+app.get('/login',(req,res)=>{
     return res.send(`Hello ${req.query.name}`);
 });
+
+app.get('/singup',(req,res)=>{
+    return res.send("Signup page")
+})
 
 app.listen(3000,()=>{
     console.log('Server is running on port 3000');
