@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Url_Shortener</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <form id="url-shortener">
+            <label for="Url">Enter URL:</label>
+            <input type="url" name="Url" id="Url">
+            <label for="short-url">Short URL:</label>
+            <input type="text" name="short-url" id="short-url" required>
+            <button type="submit">Shorten URL</button>      
+        </form>
+        <div id="result">
+            <h2>Shortened URL:</h2>
+            <p id="shortened-url"></p>
+        </div>
+    </div>
+</body>
+  <script>
+    // JavaScript code
+    document.getElementById('url-shortener').addEventListener('submit', function(event) {
+        
+        event.preventDefault(); // Prevent form submission
+        const urlInput = document.getElementById('Url').value;
+        const shortUrlInput = document.getElementById('short-url').value;
+
+        console.log(urlInput,shortUrlInput);
+        // Simple hash function to create a short URL
+        // const hash = btoa(urlInput).substring(0, 8);
+        // const shortUrl = `https://short.url/${hash}`;
+        
+        // shortUrlInput.value = shortUrl;
+        // document.getElementById('shortened-url').textContent = shortUrl;
+    });
+  </script>
+</html>
